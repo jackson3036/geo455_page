@@ -1,1 +1,1 @@
-# geo455_page
+# geo455_page - Webmapping Course
