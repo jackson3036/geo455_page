@@ -5,27 +5,29 @@
     </head>
     <body>
         <h2>Earth Poles Viewer</h2>
-        <img id="myImage" src="images/north.svg"><br>
-        <input type="button" value="North Pole" id="north">
-        <input type="button" value="South Pole" id="south">
+                  
+        <img id="myImage" src="images/uwlcolor.png"><br>
+        <input type="button" value="Color" id="color">
+        <input type="button" value="Grayscale" id="grayscale">
         <script>
-            function showNorth() {
+            function showColor() {
                 document
                     .getElementById("myImage")
-                    .src = "images/north.svg";
+                    .src = "images/uwlcolor.png";
             }
-            function showSouth() {
+            function showGrayscale() {
                 document
                     .getElementById("myImage")
-                    .src = "images/south.svg";
+                    .src = "images/uwlgray.png";
             }
             document
-                .getElementById("north")
-                .addEventListener("click", showNorth);
+                .getElementById("color")
+                .addEventListener("click", showColor);
             document
-                .getElementById("south")
-                .addEventListener("click", showSouth);
+                .getElementById("grayscale")
+                .addEventListener("click", showGrayscale);
         </script>
     </body>
 </html>
+
 
