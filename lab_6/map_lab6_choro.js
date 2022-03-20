@@ -12,11 +12,11 @@ var mymap = L.map('map', {
 
 
 function getColor(value) {
-    return value > 139 ? '#54278f':
-           value > 87  ? '#756bb1':
-           value > 53  ? '#9e9ac8':
-           value > 32  ? '#cbc9e2':
-                         '#f2f0f7';
+    return value > 139 ? '#006d2c':
+           value > 87  ? '#31a354':
+           value > 53  ? '#74c476':
+           value > 32  ? '#bae4b3':
+                         '#edf8e9';
 }
 
 function style(feature){
