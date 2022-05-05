@@ -25,7 +25,7 @@ var satellite = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
 //Variables
 
 var dmgpath = L.icon ({
-    iconUrl: 'images/damagepath.png',
+    iconUrl: 'Images/damagepath.png',
     iconSize: [600, 350],
     iconAnchor: [0, 0],
 });
