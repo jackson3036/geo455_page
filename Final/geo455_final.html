@@ -6,6 +6,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+        <script src="https://unpkg.com/elm-pep@1.0.6/dist/elm-pep.js"></script>
         <style>
             body {
                 margin: 0;
@@ -28,11 +29,18 @@
                 border-radius: 3px;
                 z-index: 800;
             }
+              #gif {
+                position: fixed;
+                top: -20px;
+                left: 300px;
+                z-index: 500;
+            }
             #map {
                 position: absolute;
                 top: 0;
                 bottom: 0;
                 width: 100%;
+                z-index: -1;
             }
             #description {
                 position: fixed;
@@ -63,40 +71,28 @@
                 padding: 35px;
                 font-size: 10px;
             }
-            #radar  {
-                background-image: image('Images/el_reno_radar.gif');
-                width: 500px;
-                animation: anim 1.0s steps(100) infinite;
+            #sidebar {
+                position: fixed;
+                top: 100px;
+                left: 10px;
+                width: 280px;
+                padding: 0px 15px;
+                background-color: rgba(255, 255, 255, 0.7);
+                border: 1px solid grey;
+                border-radius: 3px;
+                z-index: 800;
             }
-            @keyframes anim {
-            100% { background-position: -2500px; }
-            }
-            <img 
-                data-gifffer="image.gif" 
-                data-gifffer-width="250" 
-                data-gifffer-height="250"
-            >
-        </style>
+
+   </style>
     </head>
     <body>
         <h1 id="title">Final Project: Chasing the El Reno Tornado</h1>
         <div id="map"></div>
             <script src="map_final.js"></script>
-            <script src="src/leaflet-radar.js"></script>
-            <script type="text/javascript" src="lib/gifffer.js"></script>
-                <img data-gifffer="image.gif">
-        <div id="control">
-            <div id="radar">
-            <button onclick="play()">Play</button>
-            <button onclick="pause()">Pause</button>
-            </div>
-            <div>
-                <input id="control-range" type="range" min="1" max="100">
-            </div>
-            <div>
-                <span id="min-date">3:00 PM</span>
-                <span id="max-date">9:00 PM</span>
-            </div>
+            <script src="map_final_2.js"></script>
+            <script src="map_final_3.js"></script>
+            <script src="map_final_4.js"></script>
+        </div>
         </div>
     </body>
 </html>
